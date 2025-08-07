@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar'
 function App() {
 
   return (
-   <div>
+   <div className='w-11/12 mx-auto'>
     <Navbar></Navbar>
     <Outlet></Outlet>
    </div>
