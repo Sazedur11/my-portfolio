@@ -1,16 +1,20 @@
-
-import { Outlet } from 'react-router-dom'
-import './App.css'
-import Navbar from './components/Navbar/Navbar'
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import bannerImg from "./assets/banner.jpg";
 
 function App() {
-
   return (
-   <div className='w-11/12 mx-auto'>
-    <Navbar></Navbar>
-    <Outlet></Outlet>
-   </div>
-  )
+    <div>
+      <div
+        className="bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bannerImg})` }}
+      >
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

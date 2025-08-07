@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Rubik:wght@300..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
 @theme {
   --color-themeColor: #FF014F;
   --color-themeColor2: #760D2D;
+  --font-rajdhani: "Rajdhani", sans-serif; 
+  --font-rubik: "Rubik", sans-serif; 
 }
