@@ -1,0 +1,44 @@
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+.dbox{
+    position: relative;
+    
+    background: repeating-conic-gradient(from var(--a), #FF014F 0%, #FF014F 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%{
+        --a: 0deg
+    }
+    100%{
+        --a: 360deg
+    }
+}
+.dbox::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    border-radius: 16px;
+    background: repeating-conic-gradient(from var(--a), #FF014F 0%, #FF014F 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    animation-delay: -6.5s;
+}
+.dbox::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 10px solid #141414;
+    border-radius: 16px;
+    background: #000000;
+}
+.innerbox{
+    position: relative;
+    z-index: 1000;
+}

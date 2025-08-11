@@ -1,4 +1,5 @@
 import { Monitor, Brush, ShoppingCart, Zap } from "lucide-react";
+import '../styles/border.css';
 
 const services = [
   {
@@ -29,17 +30,19 @@ const services = [
 
 const Details = () => {
   return (
-     <section className="py-16">
+     <section className="py-16 ">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 ">
           {services.map((service, index) => (
             <div
               key={index}
-              className="border-1 border-themeColor rounded-2xl shadow-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-xl"
+              className=" rounded-2xl shadow-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-xl dbox"
             >
-              <div className="flex justify-center text-themeColor  mb-4">{service.icon}</div>
+             <div className="innerbox">
+               <div className="flex justify-center text-themeColor  mb-4">{service.icon}</div>
               <h3 className="text-lg hover:text-themeColor font-semibold mb-3 hover:underline hover:decoration-3">{service.title}</h3>
               <p className="text-gray-400 text-sm">{service.description}</p>
+             </div>
             </div>
           ))}
         </div>
