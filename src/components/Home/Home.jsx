@@ -1,13 +1,15 @@
-
 import Banner from "../Banner/Banner";
-
+import Details from "../Details/Details";
 
 const Home = () => {
-    return (
-        <div className="w-11/12 mx-auto">
-           <Banner></Banner>
-        </div>
-    );
+  return (
+    <div className="bg-black">
+      <Banner></Banner>
+      <div className="w-11/12 mx-auto">
+        <Details></Details>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

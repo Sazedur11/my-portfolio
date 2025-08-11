@@ -2,9 +2,49 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
 @theme {
   --color-themeColor: #FF014F;
   --color-themeColor2: #760D2D;
   --font-rajdhani: "Rajdhani", sans-serif; 
   --font-rubik: "Rubik", sans-serif; 
+}
+
+@layer utilities {
+  .bg-anim-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* First background (before) */
+  .bg-anim-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/src/assets/html5.svg') center/cover no-repeat;
+    animation: moveBg1 10s linear infinite;
+    z-index: 0;
+  }
+
+  /* Second background (after) */
+  .bg-anim-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/src/assets/css3.svg') top right/150px no-repeat;
+    animation: moveBg2 6s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Animations */
+  @keyframes moveBg1 {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50px); }
+  }
+
+  @keyframes moveBg2 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 }
