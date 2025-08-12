@@ -40,7 +40,7 @@ const Details = () => {
             >
              <div className="innerbox">
                <div className="flex justify-center text-themeColor  mb-4">{service.icon}</div>
-              <h3 className="text-lg hover:text-themeColor font-semibold mb-3 hover:underline hover:decoration-3">{service.title}</h3>
+              <h3 className="text-lg text-white hover:text-themeColor font-semibold mb-3 hover:underline hover:decoration-3">{service.title}</h3>
               <p className="text-gray-400 text-sm">{service.description}</p>
              </div>
             </div>
