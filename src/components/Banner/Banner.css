@@ -1,12 +1,14 @@
-
+/* banner img border animation */
 @property --a{
     syntax: '<angle>';
     inherits: false;
     initial-value: 0deg;
 }
-.dbox{
+.imgBox{
     position: relative;
-    
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
     background: repeating-conic-gradient(from var(--a), #FF014F 0%, #FF014F 10%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
 }
@@ -18,28 +20,32 @@
         --a: 360deg
     }
 }
-.dbox::before{
+.imgBox::before{
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
     top: 0px;
     right: 0px;
-    border-radius: 16px;
     background: repeating-conic-gradient(from var(--a), #760D2D 0%, #760D2D 10%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
 }
-.dbox::after{
+.imgBox::after{
     content: '';
     position: absolute;
     inset: 2px;
-    border: 10px solid #141414;
-    border-radius: 16px;
-    background: #000000;
+    border: 5px;
+    border-radius: 50%;
+    background: #0F0F0F;
 }
-.innerbox{
+.imgBox img{
     position: relative;
+    background-color: #FF014F;
+    width: 480px;
+    height: 480px;
+    top: 10px;
+    left: 10px;
     z-index: 1000;
 }
-

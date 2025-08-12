@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import sazedur from "../../assets/sr.png";
 import bannerImg from '../../assets/banner.jpg'
 import { gsap } from "gsap";
+import '../Banner/Banner.css'
 
 
 const Banner = () => {
@@ -27,7 +28,7 @@ const Banner = () => {
       style={{backgroundImage: `url(${bannerImg})`}}
     >
       <div className="hero-content flex-col lg:flex-row-reverse gap-10">
-        <div className="bg-linear-65 from-themeColor to-themeColor2-200 rounded-full">
+        <div className="imgBox bg-linear-65 from-themeColor to-themeColor2-200 rounded-full">
           <img
             className="w-110 h-auto rounded-full grayscale-25"
             src={sazedur}
@@ -48,7 +49,7 @@ const Banner = () => {
             Specializing in creating modern, responsive, and user-friendly <br /> web applications. I love turning ideas into reality with
             code.
           </p>
-          <button className="text-white bg-themeColor font-rubik font-bold px-6 py-4 rounded-full">
+          <button className="text-white bg-themeColor font-rubik font-bold px-6 py-4 rounded-full border-2 border-themeColor hover:bg-base-100">
             Contact Me
           </button>
         </div>
