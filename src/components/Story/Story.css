@@ -4,9 +4,9 @@
     inherits: false;
     initial-value: 0deg;
 }
-.dbox{
+.box{
     position: relative;
-    background: repeating-conic-gradient(from var(--a), #FF014F 0%, #FF014F 10%, transparent 10%, transparent 50%);
+    background: repeating-conic-gradient(from var(--a), #ff014d31 0%, #FF014F 20%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
 }
 @keyframes animate{
@@ -17,7 +17,7 @@
         --a: 360deg
     }
 }
-.dbox::before{
+.box::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -25,19 +25,19 @@
     top: 0px;
     right: 0px;
     border-radius: 16px;
-    background: repeating-conic-gradient(from var(--a), #760D2D 0%, #760D2D 10%, transparent 10%, transparent 50%);
+    background: repeating-conic-gradient(from var(--a), #760d2d3a 0%, #7a021c 20%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
 }
-.dbox::after{
+.box::after{
     content: '';
     position: absolute;
     inset: 2px;
-    border: 10px solid #141414;
+    border: 10px solid #0c0c0c5b;
     border-radius: 16px;
-    background: #000000;
+    background: #141414;
 }
-.innerbox{
+.innerBoxContent{
     position: relative;
     z-index: 1000;
 }
