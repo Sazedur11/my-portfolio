@@ -1,6 +1,7 @@
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Details from "../Details/Details";
+import ImageSlider from "../ImageSlider/ImageSlider";
 import Logo from "../Logo/Logo";
 import Story from "../Story/Story";
 
@@ -13,6 +14,7 @@ const Home = () => {
         <About></About>
         <Logo></Logo>
         <Story></Story>
+        <ImageSlider></ImageSlider>
       </div>
     </div>
   );

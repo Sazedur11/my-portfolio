@@ -1,0 +1,42 @@
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.imageContainer .imageItem{
+    width: 10rem;
+    height: 20rem;
+    cursor: pointer;
+    transition: 0.5s;
+    filter: brightness(0.2);
+}
+.imageContainer .imageItem:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+.imageContainer .imageItem:hover + *{
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(40deg);
+}
+.imageContainer .imageItem:hover + * + *{
+    filter: brightness(0.2);
+    transform: translateZ(70px) rotateY(20deg);
+}
+.imageContainer .imageItem:has(+ *:hover){
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+.imageContainer .imageItem:has(+ * + *:hover){
+    filter: brightness(0.2);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+
+.imageItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
