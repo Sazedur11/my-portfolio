@@ -147,7 +147,7 @@ const CircuitBoard = ({children}) => {
                 }
             }
 
-            ctx.strokeStyle = "rgba(50, 50, 70, 0.3)"
+            ctx.strokeStyle = "#531524"
             ctx.lineWidth = 1
             for (const path of paths) {
                 if (!path.isActive) {
@@ -165,14 +165,14 @@ const CircuitBoard = ({children}) => {
                     const fromNode = nodes[path.from]
                     const toNode = nodes[path.to]
 
-                    ctx.strokeStyle = `rgba(0, 200, 255, ${path.activationLevel * 0.2})`
+                    ctx.strokeStyle = `rgba(255, 0, 0, ${path.activationLevel * 0.2})`
                     ctx.lineWidth = 3
                     ctx.beginPath()
                     ctx.moveTo(fromNode.x, fromNode.y)
                     ctx.lineTo(toNode.x, toNode.y)
                     ctx.stroke()
 
-                    ctx.strokeStyle = `rgba(100, 220, 255, ${path.activationLevel})`
+                    ctx.strokeStyle = `rgba(255, 0, 0, ${path.activationLevel})`
                     ctx.lineWidth = 1
                     ctx.beginPath()
                     ctx.moveTo(fromNode.x, fromNode.y)
@@ -183,20 +183,20 @@ const CircuitBoard = ({children}) => {
 
             for (const node of nodes) {
                 if (!node.isActive) {
-                    ctx.fillStyle = "rgba(100, 100, 120, 0.5)"
+                    ctx.fillStyle = "red"
                     ctx.beginPath()
                     ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2)
                     ctx.fill()
                 } else {
                     const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.size * 3)
-                    gradient.addColorStop(0, `rgba(0, 200, 255, ${node.activationLevel})`)
-                    gradient.addColorStop(1, "rgba(0, 200, 255, 0)")
+                    gradient.addColorStop(0, `rgba(255, 0, 0, ${node.activationLevel})`)
+                    gradient.addColorStop(1, "red")
                     ctx.fillStyle = gradient
                     ctx.beginPath()
                     ctx.arc(node.x, node.y, node.size * 3, 0, Math.PI * 2)
                     ctx.fill()
 
-                    ctx.fillStyle = `rgba(100, 220, 255, ${node.activationLevel})`
+                    ctx.fillStyle = `rgba(255, 0, 0, ${node.activationLevel})`
                     ctx.beginPath()
                     ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2)
                     ctx.fill()
