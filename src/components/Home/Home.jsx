@@ -4,6 +4,8 @@ import Details from "../Details/Details";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import Logo from "../Logo/Logo";
 import Story from "../Story/Story";
+import SkillsSection from "../SkillsSection/SkillsSection";
+import Skills from "../Skills/Skills";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
         <Logo></Logo>
         <Story></Story>
         <ImageSlider></ImageSlider>
+        <SkillsSection></SkillsSection>
+        <Skills></Skills>
       </div>
     </div>
   );
