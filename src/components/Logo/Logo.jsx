@@ -15,7 +15,7 @@ import firebase from '../../assets/logo/firebase.png'
 const Logo = () => {
     return (
         <div className="md:max-w-6xl mx-auto">
-            <Marquee direction="right" pauseOnHover="true" gradient="1000" gradientColor="#770D2D"  className="mb-4" >
+            <Marquee direction="right" pauseOnHover="true"   className="mb-4" >
                 <img className="w-20 h-15 mx-4" src={html} alt="" />
                 <img className="w-20 h-15 mx-4" src={css} alt="" />
                 <img className="w-20 h-15 mx-4" src={tailwind} alt="" />
@@ -29,7 +29,7 @@ const Logo = () => {
                 <img className="w-20 h-15 mx-4" src={firebase} alt="" />
                 <img className="w-20 h-15 mx-4" src={mongodb} alt="" />
             </Marquee>
-            <Marquee direction="left" pauseOnHover="true" gradient="1000" gradientColor="#770D2D" >
+            {/* <Marquee direction="left" pauseOnHover="true" gradient="1000" gradientColor="#770D2D" >
                 <img className="w-20 h-15 mx-4" src={html} alt="" />
                 <img className="w-20 h-15 mx-4" src={css} alt="" />
                 <img className="w-20 h-15 mx-4" src={tailwind} alt="" />
@@ -42,7 +42,7 @@ const Logo = () => {
                 <img className="w-20 h-15 mx-4" src={expressjs} alt="" />
                 <img className="w-20 h-15 mx-4" src={firebase} alt="" />
                 <img className="w-20 h-15 mx-4" src={mongodb} alt="" />
-            </Marquee>
+            </Marquee> */}
         </div>
     );
 };
