@@ -18,7 +18,7 @@ const Home = () => {
         <Story></Story>
         <ImageSlider></ImageSlider>
         <SkillsSection></SkillsSection>
-        <Skills></Skills>
+        {/* <Skills></Skills> */}
       </div>
     </div>
   );
